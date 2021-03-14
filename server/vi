@@ -1,0 +1,1000 @@
+    6  ls
+    7  cd mnt
+    8  ls
+    9  cd c
+   10  ls
+   11  cd User
+   12  cd Users
+   13  ls
+   14  cd Ben
+   15  ls
+   16  cd Desktop
+   17  ls
+   18  ./init_sat
+   19  ls
+   20  ./init_sat
+   21  ls
+   22  vi init_sat
+   23  objdump -d ./init_sat
+   24  sudo apt install binutils
+   25  sudo apt-get update
+   26  sudo apt install binutils
+   27  objdump -d ./init_sat
+   28  gdb ./init_sat
+   29  sudo apt install gdb
+   30  gdb ./init_sat
+   31  ./init_sat osmium
+   32  ./init_sat
+   33  ./init_sat -dfadf
+   34  ./init_sat
+   35  traceip
+   36  trace
+   37  iptrace
+   38  ./init_sat
+   39  ssh 34.76.101.29
+   40  traceroute google.com
+   41  sudo apt install traceroute
+   42  git status
+   43  traceroute www.google.com
+   44  ./init_sat
+   45  cd ~/mnt
+   46  cd ..
+   47  cd mnt
+   48  ls
+   49  cd c
+   50  ls
+   51  cd Users
+   52  ls
+   53  cd Ben
+   54  cd Desktop
+   55  ls
+   56  cd '[SYSTEM]'
+   57  ls
+   58  cd ..
+   59  ls
+   60  rm -rfd '[SYSTEM]'
+   61  mount family.ntfs /family
+   62  sudo mount family.ntfs /family
+   63  pip install analyzeMFT
+   64  sudo apt install python-pip
+   65  pip install analyzeMFT
+   66  ls
+   67  ls -al 
+   68  analyzeMFT.py -v
+   69  cd ..
+   70  ls
+   71  cd ..
+   72  cd mnt
+   73  cd c
+   74  ls
+   75  cd Users/Ben/Desktop
+   76  git clone https://github.com/dkovar/analyzeMFT
+   77  cd analyzeMFT
+   78  python setup.py install
+   79  sudo python setup.py install
+   80  analyzeMFT -v
+   81  ls
+   82  python analyzeMFT.py -v
+   83  ls -al 
+   84  python analyzeMFT.py -f '$MFT'
+   85  python analyzeMFT.py -f \'$MFT\'
+   86  python analyzeMFT.py -f /'$MFT/'
+   87  python analyzeMFT.py -f '$MFT'
+   88  python analyzeMFT.py -f '$MFT' -o mftanalysis
+   89  ls
+   90  cat mftanalysis
+   91  python analyzeMFT.py -a -f '$MFT' -o mftanalysis
+   92  python analyzeMFT.py -a -f '$MFTMirr' -o mftanalysis
+   93  python analyzeMFT.py -a -f '$UpCase' -o mftanalysis
+   94  python analyzeMFT.py -a -f '$Secure' -o mftanalysis
+   95  python analyzeMFT.py -a -f '$AttrDef' -o mftanalysis
+   96  python analyzeMFT.py -a -f '$Bitmap' -o mftanalysis
+   97  python analyzeMFT.py -a -f '$MFT' -o mftanalysis
+   98  ping readme.ctfcompetition.com
+   99  curl readme.ctfcompetition.com
+  100  curl https://readme.ctfcompetition.com
+  101  curl https://readme.ctfcompetition.com -p 1337
+  102  curl https://readme.ctfcompetition.com:1337
+  103  curl http://readme.ctfcompetition.com:1337
+  104  curl http://readme.ctfcompetition.com:1337 > output.txt
+  105  cat output-txt
+  106  ls
+  107  cat output.txt
+  108  vi output.txt
+  109  curl http://readme.ctfcompetition.com:1337 | output.txt
+  110  ls
+  111  cat output.txt
+  112  curl http://readme.ctfcompetition.com:133
+  113  ssh readme.ctfcompetition.com:1337
+  114  ssh readme.ctfcompetition.com -p 1337
+  115  ssh readme.ctfcompetition.com:1337
+  116  nc readme.ctfcompetition.com 
+  117  nc readme.ctfcompetition.com 1337
+  118  ls
+  119  ls -al 
+  120  cd ..
+  121  ls
+  122  cd mcavoybn
+  123  nc readme.ctfcompetition.com 1337
+  124  cd ..
+  125  ls
+  126  cd ..
+  127  ls
+  128  cd mnt
+  129  ls
+  130  cd c
+  131  ls
+  132  cd Desktop
+  133  ls
+  134  cd Users
+  135  cd Ben
+  136  ls
+  137  cd Desktop
+  138  ls
+  139  cd ls -al 
+  140  ls 
+  141  cd 90s_art
+  142  rm *s
+  143  ls
+  144  rm *s.jpg
+  145  ls
+  146  cd ..
+  147  ls
+  148  cd Future_Cities
+  149  rm *s.jpg
+  150  cd ..
+  151  ls
+  152  cd Artwork
+  153  rm *s.jpg
+  154  cd ..
+  155  ls 
+  156  cd ~
+  157  ls
+  158  ls -al 
+  159  cat output.txt
+  160  vi 
+  161  git -v
+  162  ls
+  163  git clone https://github.com/ForstaLabs/atlas-ui
+  164  cd atlas-ui
+  165  vi .
+  166  vi ~/.vimrc
+  167  ls
+  168  cd bing
+  169  cd bin
+  170  cd ..
+  171  vi .
+  172  wget http://cs.boisestate.edu/~tim/courses/fall19/457/checkers.tar.gz
+  173  tar -xzvf checkers.tar.gz .
+  174  tar -xzvf checkers.tar.gz
+  175  cd checkers
+  176  make 
+  177  sudo apt-get install xorg openbox
+  178  make
+  179  sudo apt-get update
+  180  make
+  181  sudo apt-get update
+  182  sudo apt-get install xorg openbox
+  183  make
+  184  sudo apt install libx11-dev
+  185  make
+  186  apt search Xm.h
+  187  sudo apt-get install lesstif2-dev
+  188  sudo apt-get install libmotif-dev
+  189  make
+  190  sudo apt-get install lib32z1-dev 
+  191  make
+  192  sudo apt-get install xauth
+  193  sudo apt-get install xorg
+  194  sudo apt-get install zlib1g-dev
+  195  sudo apt-get install libz-dev
+  196  $ sudo apt-get install libtool
+  197  sudo apt-get install libtool
+  198  ssh onyx.boisestate.edu -l benmcavoy
+  199  sudo apt-get install libxaw7-dev
+  200  cd checkers
+  201  make
+  202  man libtool
+  203  libtool help
+  204  sudo apt install libtool-bin
+  205  man libtool
+  206  libtool
+  207  libtool --mode=compile make
+  208  ls
+  209  ssh blukat@pwnable.kr -p2222
+  210  ls 
+  211  mkdir ctf_stuff
+  212  cd ctf_stuff
+  213  ls
+  214  asdfasdfadf
+  215  clear
+  216  touch col.c 
+  217  vi col.c
+  218  touch col.c
+  219  vi col.c
+  220  gcc col.c
+  221  ls
+  222  gcc -o col.c
+  223  docker --version
+  224  sudo apt update && sudo apt dist-upgrade && sudo apt autoremove
+  225  ls
+  226  ls -al 
+  227  sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+  228  sudo apt-key fingerprint 0EFCD88
+  229  sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+  230  sudo apt updatre
+  231  sudo apt update
+  232  sudo apt-get install docker-ce docker-ce-cli containerd.io
+  233  sudo docker run hello-world
+  234  sudo systemctl enable docker
+  235  sudo docker run hello-world
+  236  docker run --help
+  237  sudo docker run hello-world
+  238  docker 
+  239  sudo docker run hello-world
+  240  sudo usermod -aG docker $USER
+  241  sudo docker run hello-world
+  242  docker run hello-world
+  243  apt remove --purge containerd.io docker-ce docker-ce-cli
+  244  sudo apt remove --purge containerd.io docker-ce docker-ce-cli
+  245  wget https://download.docker.com/linux/debian/dists/stretch/pool/stable/amd64/docker-ce_18.06.1~ce~3-0~debian_amd64.deb
+  246  apt install docker-ce=18.06.1~ce~3-0~ubuntu
+  247  sudo apt install docker-ce=18.06.1~ce~3-0~ubuntu
+  248  sudo docker run hello-world
+  249  sudo systemctl enable docker
+  250  sudo docker run hello-world
+  251  docker images
+  252  sudo wget https://storage.googleapis.com/golang/go1.9.2.linux-amd64.tar.gz
+  253  sudo tar -C /usr/local -xzf go1.9.2.linux-amd64.tar.gz
+  254  export PATH=$PATH:/usr/local/go/bin
+  255  go get -d github.com/jstarks/npiperelay
+  256  sudo apt update && sudo apt dist-upgrade && sudo apt autoremove
+  257  sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+  258  sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+  259  sudo apt-key fingerprint 0EBFCD88
+  260  sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+  261  sudo apt update
+  262  sudo apt-get install docker-ce docker-ce-cli containerd.io
+  263  sudo docker run hello-world
+  264  sudo usermod -aG docker $USER
+  265  newgrp docker
+  266  ls
+  267  cd Desktop
+  268  ls
+  269  ls -al 
+  270  cd ..
+  271  ls
+  272  cd Downloads
+  273  ls
+  274  ls -al 
+  275  ls
+  276  ls -al 
+  277  cd /
+  278  ls
+  279  cd mnt
+  280  ls
+  281  cd c
+  282  ls
+  283  cd Users
+  284  ls
+  285  cd Ben/
+  286  ls
+  287  cd Downlopads
+  288  cd Downloads
+  289  ls
+  290  sudo chmod 400 plextrac_redhat.pem
+  291  ls -al 
+  292  cd ..
+  293  cd Desktop
+  294  ls -al *pl
+  295  ls
+  296  vi plextrac_redhat.pem
+  297  ls
+  298  sudo chmod 400 plextrac_redhat.pem
+  299  sudo ssh -i plextrac_redhat.pem ec2-user@34.217.243.8
+  300  cat /etc/hosts
+  301  apt install ghc
+  302  sudo apt install ghc
+  303  git clone https://github.com/raviksharma/bartosz-basics-of-haskell
+  304  cd bartosz-basics-of-haskell/
+  305  ls
+  306  cd 1
+  307  cd 1-calling-functions/
+  308  ls
+  309  ghc sq1.hs
+  310  ./sq1
+  311  cat sq1.hs
+  312  cat sq2.hs
+  313  ghc sq2.hs
+  314  ./sq2
+  315  vi sq1.hs
+  316  ghc sq1.hs
+  317  ./sq1
+  318  ls
+  319  cat pyth1.hs
+  320  cat pyth2.hs
+  321  cd ..
+  322  ls
+  323  cd 1
+  324  cd 1-calling-functions/
+  325  ls
+  326  ./pyth1.hs
+  327  ghc ./pyth1.hs
+  328  cat pyth1.hs
+  329  cat sq_dollar.hs
+  330  cat sq_dot.hs
+  331  ghc sq_dollar.hs
+  332  ghc sq_dot.hs
+  333  ./sq_dollar
+  334  ./sq_dot
+  335  cd ..
+  336  ls
+  337  cd 2-my-first-program/
+  338  ls
+  339  cat center.hs
+  340  ghc center.hs 
+  341  ./center 
+  342  java -version
+  343  sudo apt install openjdk-8-jre-headless
+  344  clj
+  345  clojure
+  346  sudo apt install clojure
+  347  curl -O https://download.clojure.org/install/linux-install-1.10.1.561.sh
+  348  chmod +x linux-install-1.10.1.561.sh
+  349  sudo ./linux-install-1.10.1.561.sh
+  350  clj -h
+  351  clojure -h
+  352  java -v
+  353  sudo apt install openjdk-8-jre-headless
+  354  sudo apt update
+  355  sudp apt upgrade
+  356  sudo apt upgrade
+  357  java -version
+  358  sudo apt install openjdk-8-jre-headless
+  359  java -version
+  360  clojure -version
+  361  clojure --version
+  362  clojure -v
+  363  code /tmp/clojure-1235008455349209055.edn 
+  364  clojure -help
+  365  clojure --help
+  366  curl -o https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
+  367  curl -O https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
+  368  ls
+  369  mv lein ~/bin
+  370  chmod a+x ~/bin/lein
+  371  sudo chmod a+x ~/bin/lein
+  372  cd ~
+  373  ls
+  374  cd bin
+  375  ls
+  376  mv bin lein
+  377  ls
+  378  cd ~
+  379  ls
+  380  cd /
+  381  ls
+  382  cd ~
+  383  ls
+  384  mv -f lein /bin
+  385  sudo mv lein /bin
+  386  ls
+  387  cd /bin 
+  388  chmod a+x lein
+  389  lein
+  390  cd ~
+  391  lein
+  392  cd Desktop
+  393  lein new shouter
+  394  ls
+  395  cd shouter
+  396  ls
+  397  code .
+  398  sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+  399  cd ..
+  400  touch install-pg.sh
+  401  chmod +x install-pg.sh 
+  402  code install-pg.sh 
+  403  bash install-pg.sh 
+  404  initdb pg
+  405  source ~/.bashrc
+  406  initdb pg
+  407  sudo apt-get install postgresql-12
+  408  sudo snap install heroku --classic
+  409  heroku
+  410  curl https://cli-assets.heroku.com/install.sh | sh
+  411  heroku login
+  412  initdb pg
+  413  sudo su - postgres
+  414  lein repl
+  415  git clone httpsgit clone https://github.com/heroku/clojure-getting-started.git
+  416  git clone https://github.com/heroku/clojure-getting-started.git
+  417  cd clojure-getting-started
+  418  heroku create
+  419  git push heroku master
+  420  heroku ps:scale web=1
+  421  heroku open
+  422  createdb shouter
+  423  lein repl
+  424  git add .
+  425  git commit -m "Add camel-snake-kebab and use it from web.clj!"
+  426  git config --global user.email "mcavoybn@gmail.com"
+  427  git config --global user.name "mcavoybn"
+  428  git commit -m "Add camel-snake-kebab and use it from web.clj!"
+  429  git push heroku master
+  430  heroku open
+  431  curl https://frozen-oasis-58064.herokuapp.com/camel?input=doner-kebabo
+  432  heroku addons:create papertrail
+  433  heroku addons
+  434  initdb pg
+  435  export PATH=$PATH;/usr/lib/postgresql/*/bin
+  436  printenv PATH
+  437  export PATH=$PATH:/usr/lib/postgresql/*/bin
+  438  initdb pg
+  439  export PATH=$PATH:/usr/lib/postgresql/*/bin
+  440  printenv PATH
+  441  source ~/.bashrc
+  442  initdb pg
+  443  cd /usr/lib/
+  444  ls
+  445  ls p
+  446  cd postgresql
+  447  ls
+  448  cd 12
+  449  ls
+  450  cd bin
+  451  ls
+  452  export PATH=$PATH:/usr/lib/postgresql/12/bin
+  453  printenv PATH
+  454  initdb pg
+  455  cd ~
+  456  ls
+  457  cd Desktop
+  458  ls
+  459  cd clojure-getting-started/
+  460  initdb pg
+  461  postgres -D pg &
+  462  pg_ctl -D pg -l logfile start
+  463  sudo pg_ctl -D pg -l logfile start
+  464  sudo initdb pg
+  465  initdb pg
+  466  postgres -D pg &
+  467  sudo postgres -D pg &
+  468  ps
+  469  sudo postgres -D pg &
+  470  postgres
+  471  postgres -D pg 
+  472  su - 
+  473  su -
+  474  chown -R postgres:postgres /var/run/postgresql
+  475  sudo apt update
+  476  sudo -i
+  477  sudo postgres -D pg &
+  478  postgres -D pg &
+  479  cd ..
+  480  lein new harmonicon
+  481  cd harmonicon
+  482  lks
+  483  ls
+  484  code .
+  485  lein help
+  486  lein run
+  487  ls
+  488  lein run
+  489  lein help
+  490  lein deps
+  491  lein run 
+  492  cd ..
+  493  lein new insane-noises
+  494  cd insane-noises/
+  495  ls
+  496  lein run 
+  497  lein deps
+  498  code project.clj 
+  499  lein run 
+  500  ls
+  501  cd src
+  502  ls
+  503  code insane_noises/
+  504  cd ..
+  505  cd harmonicon/
+  506  ls
+  507  lein run 
+  508  printenv
+  509  printenv DISPLAY
+  510  export DISPLAY=X11
+  511  lein run 
+  512  cdoe .
+  513  git status
+  514  ls
+  515  cd atlas-ui
+  516  ls
+  517  cd ..
+  518  git status
+  519  ls
+  520  cd Desktop
+  521  git status
+  522  npm --v
+  523  nvm install latest
+  524  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash
+  525  source ~/.bashrc
+  526  nvm use latest
+  527  nvm install latest
+  528  nvm ls-remote
+  529  npm install 14
+  530  nvm install 14
+  531  npm --version
+  532  npm install -g @vue/cli
+  533  vue create mcavoybn.com
+  534  cd mcavoybn.com
+  535  npm run serve
+  536  ls
+  537  rm -rfd ./atlas-ui ./checkers ./checkers.tar.gz ./col.c ctf_stuff/ ./go
+  538  rm -rfd docker-ce_18.06.1~ce~3-0~debian_amd64.deb go1.9.2.linux-amd64.tar.gz 
+  539  rm -rfd linux-install-1.10.1.561.sh 
+  540  rm -rfd out.file output.txt 
+  541  ls
+  542  code -r bartosz-basics-of-haskell/
+  543  cd ..
+  544  git clone https://github.com/madbob/TuxChan
+  545  cd TuxChan
+  546  ./configure
+  547  ls
+  548  tar -C /usr/local -xzf go1.15.6.linux-amd64.tar.gz
+  549  cd ..
+  550  code -r .
+  551  tar -C /usr/local -xzf go1.15.6.linux-amd64.tar.gz
+  552  export PATH=$PATH:/usr/local/go/bin
+  553  go version
+  554  nvm 
+  555  cd hello
+  556  code -r .
+  557  go -version
+  558  go
+  559  git status
+  560  ls
+  561  cd Desktop
+  562  ls
+  563  cd ..
+  564  ls
+  565  go -version
+  566  go
+  567  ls
+  568  tar -C /usr/local -xzf go1.15.6.linux-amd64.tar.gz
+  569  sudo tar -C /usr/local -xzf go1.15.6.linux-amd64.tar.gz
+  570  export PATH=$PATH:/usr/local/go/bin
+  571  go version
+  572  ls
+  573  cd hello
+  574  printenv GOOS
+  575  GOOS=js GOARCH=wasm go build -o ./wasm/main.wasm
+  576  mkdir hello
+  577  l;s
+  578  ls
+  579  cd hello
+  580  ls
+  581  code -r .
+  582  ls
+  583  tar -C /usr/local -xzf go1.15.6.linux-amd64.tar.gz
+  584  sudo tar -C /usr/local -xzf go1.15.6.linux-amd64.tar.gz
+  585  go version
+  586  source ~/.profile
+  587  go version
+  588  ls
+  589  cd hello
+  590  ls
+  591  go build
+  592  GOOS=js GOARCH=wasm go build -o ./wasm/main.wasm
+  593  code -r .
+  594  node .
+  595  go version
+  596  code ~/.profile
+  597  source ~/.profile
+  598  go version
+  599  GOOS=js GOARCH=wasm go build -o main.wasm
+  600  go run hello
+  601  go build
+  602  cd ..
+  603  ls
+  604  rm -rfd hello
+  605  rm -rfd greetings
+  606  rm -rfd go1.15.6.linux-amd64.tar.gz 
+  607  ls
+  608  mkdir hello
+  609  code -r .
+  610  cd hello
+  611  npm i 
+  612  mkdir wasm
+  613  nod -v
+  614  node -v
+  615  node server.js
+  616  GOOS=js GARCH=wasm go build -o ./wasm/main.wasm
+  617  GOOS=js GOARCH=wasm go build -o ./wasm/main.wasm
+  618  go run hello
+  619  go build
+  620  sudo rm -rf /usr/local/go 
+  621  curl https://golang.org/dl/go1.15.6.linux-amd64.tar.gz
+  622  ls
+  623  cd ..
+  624  code -r .
+  625  ls
+  626  cd hello
+  627  ls
+  628  node ./server.js
+  629  go run hello
+  630  go run hello.go
+  631  npm start
+  632  npm run 
+  633  go run main.go
+  634  go build
+  635  go mod init main
+  636  go run main
+  637  go get ebiten
+  638  go install ebiten
+  639  go install https://github.com/hajimehoshi/ebiten
+  640  go mod init
+  641  go mod init main.go
+  642  go run main.go
+  643  cd ..
+  644  go run -tags=example github.com/hajimehoshi/ebiten/v2/examples/rotate
+  645  sudo apt install libc6-dev libglu1-mesa-dev libgl1-mesa-dev libxcursor-dev libxi-dev libxinerama-dev libxrandr-dev libxxf86vm-dev libasound2-dev pkg-config
+  646  sudo apt-get update
+  647  sudo apt install libc6-dev libglu1-mesa-dev libgl1-mesa-dev libxcursor-dev libxi-dev libxinerama-dev libxrandr-dev libxxf86vm-dev libasound2-dev pkg-config --fix-missing
+  648  cd hello
+  649  go mod init
+  650  rm -rf go.mod
+  651  go mod init
+  652  ls
+  653  go mod init main.og
+  654  go mod init main.go
+  655  rm -rf go.mod
+  656  go mod init main.go
+  657  go run main.go
+  658  sudo apt-get install  openssh-server
+  659  sudo service ssh --full-restart
+  660  sudo apt-get install dropbear
+  661  sudo apt-get install x11-apps
+  662  export DISPLAY=:0
+  663  xeyes
+  664  go run main
+  665  go run main.go
+  666  GOOS=js GARCH=wasm go build ./wasm/main.wasm
+  667  GOOS=js GOARCH=wasm go build ./wasm/main.wasm
+  668  GOOS=js GOARCH=wasm go build main ./wasm/main.wasm
+  669  GOOS=js GOARCH=wasm go build main.go -o ./wasm/main.wasm
+  670  GOOS=js GOARCH=wasm go build -o main.go ./wasm/main.wasm
+  671  GOOS=js GOARCH=wasm go build -o ./wasm/main.wasm
+  672  node
+  673  node .
+  674  GOOS=js GOARCH=wasm go build -o ./wasm/main.wasm
+  675  node .
+  676  GOOS=js GOARCH=wasm go build -o ./wasm/main.wasm
+  677  node .
+  678  GOOS=js GOARCH=wasm go build -o ./wasm/main.wasm
+  679  node .
+  680  GOOS=js GOARCH=wasm go build -o ./wasm/main.wasm
+  681  go mod init
+  682  go mod init main
+  683  GOOS=js GOARCH=wasm go build -o ./wasm/main.wasm
+  684  node .
+  685  GOOS=js GOARCH=wasm go build -o ./wasm/main.wasm
+  686  node .
+  687  GOOS=js GOARCH=wasm go build -o ./wasm/main.wasm
+  688  node .
+  689  go run main
+  690  GOOS=js GOARCH=wasm go build -o ./wasm/main.wasm
+  691  node .
+  692  go run main
+  693  GOOS=js GOARCH=wasm go build -o ./wasm/main.wasm
+  694  node 
+  695  node .
+  696  ls
+  697  go run main
+  698  GOOS=js GOARCH=wasm go build -o ./wasm/main.wasm
+  699  node .
+  700  ;s
+  701  GOOS=js GOARCH=wasm go build -o ./wasm/main.wasm
+  702  go run main
+  703  go build -gcflags=all="-N -l"
+  704  gdb main
+  705  go run main
+  706  cd ..
+  707  code -r problem11.java
+  708  ls
+  709  javac problem11.java 
+  710  cd ..
+  711  java 
+  712  javac
+  713  sudo apt install openjdk-11-jdk-headless
+  714  cd ..
+  715  mkdir prana777.com
+  716  cd prana777.com
+  717  var express = require('express')
+  718  var app = express();
+  719  //Set content directories
+  720  app.use(express.static(__dirname + '/html'));
+  721  app.use('/js', express.static(__dirname + '/js'));
+  722  app.use('/css', express.static(__dirname + '/css'));
+  723  app.use("/image", express.static(__dirname + '/image'));
+  724  app.use("/wasm", express.static(__dirname + '/wasm'));
+  725  app.get('/', function(request, response) {
+  726  });
+  727  var port = process.env.PORT || 5000;
+  728  app.listen(port, function() {
+  729  ls
+  730  code -r . 
+  731  npm i -s sass
+  732  git add -A
+  733  git status
+  734  code -r .gitignore
+  735  git status
+  736  git add -A
+  737  git status
+  738  git add -A
+  739  git status
+  740  git add 0A
+  741  git add -A
+  742  git commit -am "added semantic elements to index.html, initialized npm and express, created .gitignore"
+  743  git push
+  744  npm init .
+  745  npm init
+  746  git init
+  747  git remote add origin https://github.com/mcavoybn/prana777.com
+  748  git pull
+  749  git pull 
+  750  git pull origin main
+  751  git pull
+  752  git git branch --set-upstream-to=origin/main main
+  753  git branch --set-upstream-to=origin/main main
+  754  git push
+  755  git push --set-upstream origin master
+  756  git pull
+  757  touch index.js
+  758  code -r index.js 
+  759  cd ..
+  760  cd hello
+  761  ls
+  762  code -r index.js
+  763  npm run 
+  764  npm start
+  765  npm run 
+  766  npm main
+  767  node .
+  768  cd ..
+  769  cd prana777.com
+  770  npm start
+  771  npm run serve
+  772  npm install
+  773  npm i express
+  774  npm run serve
+  775  node .
+  776  node .\
+  777  node .
+  778  git status
+  779  git add -A
+  780  git commit -am "created font scanner"
+  781  git push
+  782  curl https://cdn7.dirtyship.net/cdn2/Aftynroseballsv.mp4
+  783  wget https://cdn7.dirtyship.net/cdn2/Aftynroseballsv.mp4
+  784  code -r .
+  785  pip
+  786  pip install instagram-scraper
+  787  instagram-scraper delaneyjjayde
+  788  code -r .
+  789  instagram-scraper eunjeongchoi_studio
+  790  git status
+  791  git diff
+  792  ls
+  793  cd prana777.com
+  794  clear
+  795  git status
+  796  npm i -s jquery
+  797  npm i -g sass
+  798  sass --watch ./css/main.scss ./css/main.css
+  799  git statua
+  800  git status
+  801  nod e.
+  802  node .
+  803  cd prana777.com/
+  804  node .
+  805  instagram-scraper laurakovaleskii
+  806  code -r
+  807  instagram-scraper delaneyjjayde -story
+  808  instagram-scraper delaneyjjayde -story-video
+  809  instagram-scraper delaneyjjayde --story
+  810  instagram-scraper delaneyjjayde --story-video
+  811  instagram-scraper delaneyjjayde -t story
+  812  instagram-scraper delaneyjjayde -t story-video
+  813  instagram-scraper --login-user prana3seven
+  814  instagram-scraper --login-user prana3seven --login-pass AH7d\)R\!TjK:nu7G
+  815  instagram-scraper delaneyjjayde --login-user prana3seven --login-pass AH7d\)R\!TjK:nu7G
+  816  instagram-scraper delaneyjjayde --login-user prana3seven --login-pass AH7d\)R\!TjK:nu7G -t story-video
+  817  instagram-scraper laurakovaleskii --login-user prana3seven --login-pass AH7d\)R\!TjK:nu7G -t story-video
+  818  wget https://cdn10.dirtyship.net/dirtyship/cdn2/AftynRoseASMRteasemirro.mp4
+  819  ls
+  820  cd ..
+  821  ls
+  822  cd hello
+  823  ls
+  824  cd ..
+  825  ls
+  826  vuetify
+  827  npm 
+  828  vue create my-app
+  829  vue create tovuti-hermes
+  830  cd tovuti-hermes
+  831  vue add vuetify
+  832  sudo vue add vuetify
+  833  vue add vuetify
+  834  git status
+  835  code -r .
+  836  cd tovuti-hermes/
+  837  ls
+  838  code -r ./
+  839  npx express-generator .
+  840  cd ..
+  841  rm -rfd tovuti-hermes
+  842  vue create tovuti-hermes
+  843  cd tovuti-hermes
+  844  vue add vuetify
+  845  mkdir server
+  846  cd server 
+  847  npx express-generator
+  848  ls
+  849  cd ..
+  850  code -r .
+  851  cd ..
+  852  code -r .
+  853  npm run serve
+  854  npm i
+  855  npm run sere
+  856  npm run serve
+  857  cd tovuti-hermes/
+  858  npm run serve
+  859  npm run build
+  860  cd server
+  861  ls
+  862  npm i -s http
+  863  npm i socket.io
+  864  git --set-remote https://github.com/mcavoybn/tovuti-hermes
+  865  git remote add origin https://github.com/mcavoybn/tovuti-hermes.git
+  866  git status
+  867  git add -A
+  868  git commit -am "initial commit" 
+  869  git push 
+  870  git push --set-upstream origin master
+  871  cd ..
+  872  npm i -s vue-socket.io
+  873  npm i -s vue-socket.io --save
+  874  cd server
+  875  npm i -s node-redis
+  876  node .
+  877  node app.js
+  878  npm run start
+  879  npm i 
+  880  npm run start
+  881  npm i -s redis
+  882  npm run start
+  883  npm i -s redis-server
+  884  npm run start
+  885  sudo npm run start
+  886  npm run start
+  887  sudo apt update
+  888  sudo code /etc/redis/redis.conf
+  889  code /etc/redis/redis.conf
+  890  sudo apt install redis-server
+  891  code -r /etc/redis/redis.conf
+  892  ls /etc/
+  893  ls /etc/r*
+  894  sudo nano /etc/redis/redis.conf
+  895  sudo code -r /etc/redis/redis.conf
+  896  sudo vi /etc/redis/redis.conf
+  897  sudo systemctl restart redis.service
+  898  sudo service redis-server start
+  899  npm run start
+  900  cd ..
+  901  ls
+  902  cd ..
+  903  ls
+  904  cd prana777.com/
+  905  ls
+  906  code -r .
+  907  npm run start
+  908  cd ..
+  909  cd tovuti-hermes/s
+  910  cd tovuti-hermes/server/
+  911  npm run start
+  912  cd ..
+  913  cd prana777.com/
+  914  code .
+  915  cd ..
+  916  cd tovuti-hermes
+  917  cd server
+  918  code .
+  919  npm run server
+  920  npm run start
+  921  cd ..
+  922  npm run build
+  923  npm run serve
+  924  npm run build
+  925  cd server
+  926  npm run start
+  927  npm i -s cors
+  928  npm run start
+  929  npm i -s morgan
+  930  npm run start
+  931  sudo systemctl status redis
+  932  redis-cli
+  933  npm run start
+  934  npm i -s moment
+  935  npm run start
+  936  cd ..
+  937  npm i -s moment
+  938  npm run start
+  939  cd server/
+  940  npm run start
+  941  cd ..
+  942  npm i -s @mdi/font -D
+  943  npm run start
+  944  cd server
+  945  npm run start
+  946  git status
+  947  git add -A
+  948  git commit -am "commenting working"
+  949  npm run start
+  950  git status
+  951  git add -A
+  952  git commit -am "specify userid and articleid"
+  953  git push
+  954  git checkout main
+  955  cd ..
+  956  cloc .
+  957  sudo apt install cloc
+  958  export env=development
+  959  lsenv
+  960  printenv env
+  961  cd server
+  962  npm run serve
+  963  npm run start
+  964  cd ..
+  965  npm i -s uuid
+  966  npm run serve
+  967  npm i -s uuid
+  968  npm run serve
+  969  git status 
+  970  git add -A
+  971  git commit -am "cleanup and starting to do upvoting downvoting"
+  972  git push 
+  973  git status
+  974  npm run start
+  975  cd server
+  976  npm run serve
+  977  npm run start
+  978  git status
+  979  git add -A
+  980  git stash
+  981  npm run server
+  982  npm run start
+  983  npm run server
+  984  npm run serv
+  985  npm run serve
+  986  instagram-scraper kellykovaleski
+  987  instagram-scraper kellykovaleski -u mcavoybn -p 112358BoiseState  
+  988  instagram-scraper kellykovaleski -u mcavoybn -p 112358BoiseState!
+  989  cp -dr ./kellykovaleski/ ../kelfdghdfgh
+  990  cd ..
+  991  cd kelfdghdfgh/
+  992  ls
+  993  cd ..
+  994  cd tovuti-hermes/
+  995  ls
+  996  cd ..
+  997  code -r .
+  998  git stash apply stash@{0}
+  999  git add -A
+ 1000  git stash
+ 1001  cd server
+ 1002  npm run server
+ 1003  npm run start
+ 1004  history
+ 1005  history > vi

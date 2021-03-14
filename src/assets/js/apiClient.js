@@ -8,7 +8,9 @@ async function getComments(articleId) {
     try {
         // @TODO need to move root domain url to env vars
         var result = await fetch('http://localhost:5000/api/comments/' + articleId, {method: 'GET'});
-        return await result.json();
+        result = await result.json();
+        console.log(result);
+        return result;
     } catch (err) {
         console.error('error getting comments : ');
         console.error(err);
@@ -26,7 +28,7 @@ async function postComment(articleId, commentData) {
     try {
         // @TODO need to move root domain url to env vars
         var result = await postData('http://localhost:5000/api/comments/' + articleId, commentData);
-        return result.json();
+        return result;
     } catch (err) {
         console.error('error getting comments : ');
         console.error(err);
@@ -39,24 +41,52 @@ async function postComment(articleId, commentData) {
  * 
  * @param {string|int} articleId  The id of the thing the comment is for
  * @param {string} commentId  The id of the comment
- * @param {string|int|boolean} upOrDown
+ * @param {string} userId  The id of the user rating the comment
+ * @param {string} direction The direction we want to vote, up or down
  */
-async function rateComment(articleId, commentId, upOrDown) {
-    upOrDown = upOrDown ? "up" : "down";
+async function rateComment(articleId, commentId, userId, direction) {
     try {
         // @TODO need to move root domain url to env vars
-        const url = 'http://localhost:5000/api/comments/upvote/' + articleId + "/" + commentId + "/" + upOrDown
+        const url = 'http://localhost:5000/api/comments/rate/'
         const commentData = {
-            foo: 'bar'
+            articleId,
+            commentId,
+            userId,
+            direction
         };
-        var result = await postData(url, commentData);
-        return result.json();
+        var result = await patchData(url, commentData);
+        return result;
     } catch (err) {
         console.error('error getting comments : ');
         console.error(err);
         return err;
     }
 }
+
+// /**
+//  * Upvotes or downvotes a comment
+//  * 
+//  * @param {string|int} articleId  The id of the thing the comment is for
+//  * @param {string} commentId  The id of the comment
+//  * @param {string} commentData The comment data we are sending
+//  */
+// async function replyToComment(articleId, commentId, commentData) {
+//     try {
+//         // @TODO need to move root domain url to env vars
+//         const url = 'http://localhost:5000/api/comments/reply/'
+//         const commentData = {
+//             articleId,
+//             commentId,
+//             commentData
+//         };
+//         var result = await patchData(url, commentData);
+//         return result;
+//     } catch (err) {
+//         console.error('error getting comments : ');
+//         console.error(err);
+//         return err;
+//     }
+// }
 
 /**
  * Retrieves the user database row (joom_user) with the given id
@@ -75,7 +105,8 @@ async function getTovutiUserById(id) {
                 'x-api-key': 'api_sk_5DD8B46DC3084D6B87E2FCF2AA81330C'
             }
         });
-        return result;
+        console.log(result);
+        return await result.json();
     } catch (err) {
         console.error('error getting user : ');
         console.error(err);
@@ -107,6 +138,34 @@ async function postData(url = '', data = {}) {
     // Default options are marked with *
     const response = await fetch(url, {
       method: 'POST', // *GET, POST, PUT, DELETE, etc.
+      mode: 'cors', // no-cors, *cors, same-origin
+      cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+      credentials: 'same-origin', // include, *same-origin, omit
+      headers: {
+        'Content-Type': 'application/json'
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      redirect: 'follow', // manual, *follow, error
+      referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+      body: JSON.stringify(data) // body data type must match "Content-Type" header
+    });
+    return response.json(); // parses JSON response into native JavaScript objects
+  }
+
+  /**
+ * Used for PATCHing data with all the nicest headers
+ * 
+ * APIs are sometimes fickle about header data, so this is nice for that
+ * 
+ * Taken from https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+ * 
+ * @param {string} url  The url we want to post data to
+ * @param {object} data  The data we want to send to the endpoint
+ */
+async function patchData(url = '', data = {}) {
+    // Default options are marked with *
+    const response = await fetch(url, {
+      method: 'PATCH', // *GET, POST, PUT, DELETE, etc.
       mode: 'cors', // no-cors, *cors, same-origin
       cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
       credentials: 'same-origin', // include, *same-origin, omit

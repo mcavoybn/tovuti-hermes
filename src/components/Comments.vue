@@ -1,6 +1,11 @@
 <template>
   <v-container>
-    <v-row>
+    <v-row v-if="!hasParams">
+      <v-col cols="12">
+        <!-- If we are missing url params, render nothing -->
+      </v-col>
+    </v-row>
+    <v-row v-else>
       <v-col cols="12">
         <!-- @TODO add current user avatar here -->
         <v-textarea
@@ -26,7 +31,7 @@
         >Cancel</v-btn>
       </v-col>
     </v-row>
-    <v-row v-for="comment in comments" :key="comment.id" class="herm-comment pa-2 ma-1">
+    <v-row v-for="comment in comments" :key="comment.id" class="herm-comment pa-1 mb-2">
       <v-col cols="12">
           <span class="herm-author-name">
             <!-- @TODO add commenter user avatar here -->
@@ -47,8 +52,11 @@
             <span @click="downvoteComment(comment)" class="material-icons herm-hover-grey-clickable">
               arrow_downward
             </span>
+            <span class="herm-comment-rating">
+              {{ comment.rating || "0" }}
+            </span>
           </div>
-          <div>
+          <div v-if="comment.replies && comment.replies.length > 0">
             <span class="herm-comment-subdued">View {{comment.replyCount || '0'}} replies <span class="material-icons herm-hover-grey-clickable">expand_more</span></span>
           </div>
       </v-col>
@@ -58,11 +66,6 @@
 
 
 <style scoped>
-  .herm-comment {
-    border-radius:5px;
-    border:1px solid lightgray;
-  }
-
   .herm-comment-body {
     font-size:0.8em;
   }
@@ -105,16 +108,21 @@
       showButtons: false,
       currentUserId: "",
       currentUser: {},
-      currentArticleId: ""
+      currentArticleId: "",
+      hasParams: false
     }),
 
-    mounted: async function() {
+    async mounted() {
       // @TODO need to figure out a way to authenticate
       // this stuff. Maybe jwt? Right now it would be easy
-      // for someone to just drop in their own url params.
+      // for someone to just drop in their own user id which
+      // would allow them to post as someone else.
       const urlParams = new URLSearchParams(window.location.search);
       this.currentUserId = urlParams.get('userId');
       this.currentArticleId = urlParams.get('articleId');
+      if (!!this.currentUserId && !!this.currentArticleId) {
+        this.hasParams = true;
+      }
 
        // Retrieve information about the author from tovutis api
       const currentUserData = await apiClient.getTovutiUserById(this.currentUserId);
@@ -122,6 +130,7 @@
 
       // Load comments
       this.comments = await apiClient.getComments(this.currentArticleId);
+      console.log(this.comments);
     },
 
     methods: {
@@ -134,9 +143,10 @@
             text: this.inputValue,
             authorName: this.currentUser.Name,
             authorId: this.currentUser.Id,
-            datetime: moment.utc().format()
+            datetime: moment.utc().format(),
+            rating: 0
           };
-          var status = await apiClient.postComment(this.currentArticleId, this.currentAtricleId);
+          var status = await apiClient.postComment(this.currentArticleId, postCommentOptions);
           if (status.success) {
             this.comments.unshift(postCommentOptions);
             this.showButtons = false;
@@ -147,22 +157,20 @@
           }
         },
         async upvoteComment(comment) {
-          console.log(comment);
-          console.log('upvote comment clicked !');
-          var status = await apiClient.upvoteComment(comment.id, this.currentArticleId, "up");
+          var status = await apiClient.rateComment(this.currentArticleId, comment.id, this.currentUser.Id, "up");
           if (status.success) {
             // Reflect changes in viewmodel
+            comment.rating += 1;
           } else {
             // Adding comment failed...
             console.error(status);
           }
         },
         async downvoteComment(comment) {
-          console.log(comment);
-          console.log('upvote comment clicked !');
-          var status = await apiClient.upvoteComment(comment.id, this.currentArticleId, "down");
+          var status = await apiClient.rateComment(this.currentArticleId, comment.id, this.currentUser.Id, "down");
           if (status.success) {
             // Reflect changes in viewmodel
+            comment.rating -= 1;
           } else {
             // Adding comment failed...
             console.error(status);
