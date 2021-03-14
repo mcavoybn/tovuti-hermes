@@ -7,9 +7,10 @@ var logger = require('morgan');
 var apiRouter = require('./routes/api');
 
 var app = express();
-const http = require('http').createServer(app);
-const io = require('socket.io')(http);
 
+// @TODO Setup websockets and socket io for messaging part of app
+// const http = require('http').createServer(app);
+// const io = require('socket.io')(http);
 // io.on('connection', (socket) => {
 //   console.log('a user connected');
 //   socket.on('disconnect', () => {
@@ -19,7 +20,6 @@ const io = require('socket.io')(http);
 
 // io.emit('some event', { someProperty: 'some value', otherProperty: 'other value' }); // This will emit the event to all connected sockets
 
-// Setup websockets and socket io
 // http.listen(3000, () => {
 //   console.log('listening on *:3000');
 // });
@@ -28,7 +28,10 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(require('path').resolve(__dirname, '..'), '/dist')));
+
+// Use ../dist as the server directory
+const parentDirectory = path.join(require('path').resolve(__dirname, '..'));
+app.use(express.static(parentDirectory + '/dist'));
 
 var corsOptions = {
   origin: 'http://localhost:8080',
@@ -53,6 +56,7 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500).json(err);
 });
 
-app.listen(5000);
+const port = app.get('env') === 'development' ? 5000 : 80;
+app.listen(port);
 
 module.exports = app;
