@@ -103,21 +103,24 @@ const MAX_INPUT_CHARS = 1000;
       // The id of the user posting the comment
       currentUserId: "",
       currentUser: {},
-      // The id of the thing we are posting comments for
-      currentArticleId: ""
     }),
 
     mounted: async function() {
       // @TODO need to figure out a way to authenticate
-      // this stuff.
+      // this stuff. Maybe jwt?
+
+      const urlParams = new URLSearchParams(window.location.search);
+      this.currentUserId = urlParams.get('userId');
+      this.currentArticleId = urlParams.get('articleId');
+      const currentUserData = await apiClient.getTovutiUserById(this.currentUserId);
 
       // Retrieve information about the author from tovutis api
-      this.currentUser = {
-        name: "Ben McAvoy"
-      }
+      this.currentUser = currentUserData[0];
+      console.log(this.currentUser);
+      // console.log(this.currentUser);
 
       // load comments from api
-      this.comments = await apiClient.getComments();
+      this.comments = await apiClient.getComments(this.currentArticleId);
     },
 
     methods: {
@@ -129,13 +132,15 @@ const MAX_INPUT_CHARS = 1000;
           console.log(this.postCommentButton);
           const postCommentOptions = {
             text: this.inputValue,
-            authorName: this.currentUser.name
+            authorName: this.currentUser.Name,
+            authorId: this.currentUser.Id,
+            articleId: this.currentArticleId
           };
           console.log(postCommentOptions);
           var status = await apiClient.postComment(postCommentOptions);
           console.log(status);
           if (status.success) {
-            this.comments.push(postCommentOptions);
+            this.comments.unshift(postCommentOptions);
             this.showButtons = false;
             this.inputValue = "";
           }

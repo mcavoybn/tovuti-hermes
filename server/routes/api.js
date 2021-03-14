@@ -24,10 +24,10 @@ server.open((err) => {
       console.error(error);
     });
 
-    router.get('/comments', async function(req, res, next) {
+    router.get('/comments/:articleId', async function(req, res, next) {
       // Connect to the db and retrieve comments based on the 
       // give params
-      redisClient.get("comments", (err, comments) => {
+      redisClient.get("comments" + req.params.articleId, (err, comments) => {
         if (err) {
           console.error(err);
           return;
@@ -46,13 +46,14 @@ server.open((err) => {
     router.post('/comments', function(req, res, next) {
       // Connect to the db and create the comments
       const comment = req.body;
+      console.log(comment);
       try {
         comment.datetime = moment.utc().format();
       } catch (err) {
         console.error(err);
       }
       
-      redisClient.get("comments", (err, comments) => {
+      redisClient.get("comments" + comment.articleId, (err, comments) => {
         if (err) {
           console.error(err);
           return;
@@ -61,9 +62,10 @@ server.open((err) => {
         if (!Array.isArray(comments)) {
           comments = [];
         }
+        console.log(comment);
         console.log(comments);
         comments.unshift(comment);
-        redisClient.set("comments", JSON.stringify(comments), (err, _) => {
+        redisClient.set("comments" + comment.articleId, JSON.stringify(comments), (err, _) => {
           if (err) {
             console.error(err);
             res.status(500).json({success: false, message: "There was an error sending the comment to the database."});

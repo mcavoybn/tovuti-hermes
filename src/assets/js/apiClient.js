@@ -1,7 +1,8 @@
 
-async function getComments() {
+async function getComments(articleId) {
     try {
-        var result = await fetch('http://localhost:5000/api/comments', {method: 'GET'});
+        // @TODO need to move url to env vars
+        var result = await fetch('http://localhost:5000/api/comments/' + articleId, {method: 'GET'});
         return await result.json();
     } catch (err) {
         console.error('error getting comments : ');
@@ -12,10 +13,31 @@ async function getComments() {
 
 async function postComment(comment) {
     try {
+        // @TODO need to move url to env vars
         var result = await postData('http://localhost:5000/api/comments', comment);
         return result;
     } catch (err) {
         console.error('error getting comments : ');
+        console.error(err);
+        return err;
+    }
+}
+
+async function getTovutiUserById(id) {
+    // @TODO figure out how to get this to work on any instance
+    try {
+        var result = await fetch('https://ben.zenfullyeasy.com/api/v1/users/' + id, {
+            method: "GET",
+            headers: {
+                'Content-Type': 'application/json',
+                // @TODO move these keys to env vars
+                'x-public-key': 'api_pk_5ABFEF98D50547EDA840AE4C3DF16F18',
+                'x-api-key': 'api_sk_5DD8B46DC3084D6B87E2FCF2AA81330C'
+            }
+        });
+        return result.json();
+    } catch (err) {
+        console.error('error getting user : ');
         console.error(err);
         return err;
     }
@@ -42,5 +64,6 @@ async function postData(url = '', data = {}) {
 
 export default {
     postComment,
-    getComments
+    getComments,
+    getTovutiUserById
 };
